@@ -5,7 +5,13 @@ public class Fraccion {
         private int numerador;
         private int denominador;
 
-        public Fraccion(){
+
+    public Fraccion() {
+
+    }
+
+
+    public Fraccion(int numerador, int denominador){
 
             this.numerador=numerador;
             this.denominador=denominador;
@@ -13,18 +19,18 @@ public class Fraccion {
         }
 
 
-        public int multiplicar(Fraccion fraccion1, Fraccion fraccion2){
+
+    public Object  multiplicar(Fraccion fraccion1, Fraccion fraccion2){
 
 
-            int nominador;
-            int denominador;
+            Fraccion resultado = new Fraccion();
 
-            nominador= fraccion1.getNumerador() * fraccion2.getNumerador();
-            denominador= fraccion1.getDenominador() * fraccion2.getDenominador();
+            resultado.setNumerador(fraccion1.getNumerador() * fraccion2.getNumerador());
+            resultado.setDenominador(fraccion1.getDenominador() * fraccion2.getDenominador());
 
-            return nominador ;
+            return resultado;
 
-        }
+       }
 
 
     public int getNumerador() {
@@ -46,6 +52,10 @@ public class Fraccion {
             if(denominador>0) {
                 this.denominador = denominador;
             }
+    }
+    public String toString(){
+
+        return " El resultado es:  " + getNumerador() + "  y " + getDenominador();
     }
 
 

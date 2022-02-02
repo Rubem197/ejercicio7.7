@@ -9,6 +9,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+
         int denominador1=0;
         int numerador1=0;
         int denominador2=0;
@@ -36,8 +37,9 @@ public class Main {
 
         fraccion2.setNumerador(numerador2);
         fraccion2.setDenominador(denominador2);
+        resultado.multiplicar(fraccion1, fraccion2);
 
-        
+        System.out.println(resultado.toString());
 
 
 
