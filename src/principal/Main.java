@@ -5,14 +5,13 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
 
         Scanner sc = new Scanner(System.in);
 
 
         int denominador1=0;
-        int numerador1=0;
         int denominador2=0;
+        int numerador1=0;
         int numerador2=0;
 
         Fraccion fraccion1 = new Fraccion();
@@ -37,9 +36,9 @@ public class Main {
 
         fraccion2.setNumerador(numerador2);
         fraccion2.setDenominador(denominador2);
-        resultado.multiplicar(fraccion1, fraccion2);
+        resultado.multiplicar(fraccion1, fraccion2, resultado);
 
-        System.out.println(resultado.toString());
+        System.out.println(fraccion1.toString());
 
 
 

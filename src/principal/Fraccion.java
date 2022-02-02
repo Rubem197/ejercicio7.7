@@ -10,7 +10,6 @@ public class Fraccion {
 
     }
 
-
     public Fraccion(int numerador, int denominador){
 
             this.numerador=numerador;
@@ -18,20 +17,15 @@ public class Fraccion {
 
         }
 
+    public Object  multiplicar(Fraccion fraccion1, Fraccion fraccion2, Fraccion resultado){
 
-
-    public Object  multiplicar(Fraccion fraccion1, Fraccion fraccion2){
-
-
-            Fraccion resultado = new Fraccion();
-
+        
             resultado.setNumerador(fraccion1.getNumerador() * fraccion2.getNumerador());
             resultado.setDenominador(fraccion1.getDenominador() * fraccion2.getDenominador());
 
             return resultado;
 
        }
-
 
     public int getNumerador() {
 
