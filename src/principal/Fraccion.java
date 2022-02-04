@@ -1,5 +1,7 @@
 package principal;
 
+import java.sql.SQLOutput;
+
 public class Fraccion {
 
     private int numerador;
@@ -10,22 +12,24 @@ public class Fraccion {
 
     }
 
-    public void multiplicar(Fraccion fraccion1, Fraccion fraccion2, Fraccion resultado) {
+    public void multiplicar(Fraccion fraccion1, Fraccion fraccion2) {
 
-
+        Fraccion resultado = new Fraccion();
         resultado.setNumerador(fraccion1.getNumerador() * fraccion2.getNumerador());
         resultado.setDenominador(fraccion1.getDenominador() * fraccion2.getDenominador());
-
         fraccionar(resultado);
+        System.out.println( soltarResultado(resultado));
 
     }
 
-    public void dividir(Fraccion fraccion1, Fraccion fraccion2, Fraccion resultado) {
+    public void dividir(Fraccion fraccion1, Fraccion fraccion2) {
 
+        Fraccion resultado = new Fraccion();
         resultado.setNumerador(fraccion1.getNumerador() * fraccion2.getDenominador());
         resultado.setDenominador(fraccion2.getNumerador() * fraccion1.getDenominador());
 
         fraccionar(resultado);
+        System.out.println( soltarResultado(resultado));
     }
 
     private void fraccionar(Fraccion resultado) {
@@ -58,9 +62,9 @@ public class Fraccion {
         }
     }
 
-    public String toString() {
+    public String soltarResultado( Fraccion resultado) {
 
-        return " El resultado es:  " + getNumerador() + "  y " + getDenominador();
+        return " El resultado es:  " + resultado.getNumerador() + "  y " + resultado.getDenominador();
     }
 
 

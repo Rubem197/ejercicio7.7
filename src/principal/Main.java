@@ -46,10 +46,9 @@ public class Main {
 
         fraccion2.setNumerador(numerador2);
         fraccion2.setDenominador(denominador2);
-        resultado.multiplicar(fraccion1, fraccion2, resultado);
-        resultado.dividir(fraccion1, fraccion2, resultado);
+        resultado.multiplicar(fraccion1, fraccion2);
+        resultado.dividir(fraccion1, fraccion2);
 
-        System.out.println(resultado);
 
 
     }
